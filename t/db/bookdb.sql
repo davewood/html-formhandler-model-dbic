@@ -111,17 +111,18 @@ CREATE TABLE author (
    first_name VARCHAR(100),
    last_name VARCHAR(100),
    country_iso char(2),
-   birthdate DATETIME
+   birthdate DATETIME,
+   active BOOLEAN DEFAULT 1
 );
-INSERT INTO "author" VALUES (1, "J.K.", "Rowling", "GB", "2003-01-16 00:00:00" );
-INSERT INTO "author" VALUES (2, "Fyodor", "Dostoyevsky", "RU", "1821-11-11 00:00:00" );
-INSERT INTO "author" VALUES (3, "Neil", "Stephenson", "US", "1959-10-31 00:00:00" );
-INSERT INTO "author" VALUES (4, "Simon", "Roberts", "UK", "1975-05-01 00:00:00" );
-INSERT INTO "author" VALUES (5, "Philip", "Heller", "US", "1976-01-01 00:00:00" );
-INSERT INTO "author" VALUES (6, "Michael", "Ernest", "UK", "1970-10-01 00:00:00" );
-INSERT INTO "author" VALUES (7, "A.A.", "Milne", "UK", "1904-08-09 00:00:00" );
-INSERT INTO "author" values (8, "", "chromatic", "UK", "1969-10-01 00:00:00" );
-INSERT INTO "author" values (9, "Ian", "Langworth", "UK", "1971-12-22 00:00:00" );
+INSERT INTO "author" VALUES (1, "J.K.", "Rowling", "GB", "2003-01-16 00:00:00", 1);
+INSERT INTO "author" VALUES (2, "Fyodor", "Dostoyevsky", "RU", "1821-11-11 00:00:00", 1);
+INSERT INTO "author" VALUES (3, "Neil", "Stephenson", "US", "1959-10-31 00:00:00", 1);
+INSERT INTO "author" VALUES (4, "Simon", "Roberts", "UK", "1975-05-01 00:00:00", 1);
+INSERT INTO "author" VALUES (5, "Philip", "Heller", "US", "1976-01-01 00:00:00", 1);
+INSERT INTO "author" VALUES (6, "Michael", "Ernest", "UK", "1970-10-01 00:00:00", 1);
+INSERT INTO "author" VALUES (7, "A.A.", "Milne", "UK", "1904-08-09 00:00:00", 1);
+INSERT INTO "author" values (8, "", "chromatic", "UK", "1969-10-01 00:00:00", 1);
+INSERT INTO "author" values (9, "Ian", "Langworth", "UK", "1971-12-22 00:00:00", 1);
 
 
 CREATE TABLE author_books (

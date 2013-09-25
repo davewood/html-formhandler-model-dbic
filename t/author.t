@@ -23,4 +23,22 @@ is(scalar @formats, 6, 'got right number of format options');
 
 my $fif = $form->fif;
 
+
+
+
+my $form2 = BookDB::Form::Author->new;
+my $author2 = $schema->resultset('Author')->new_result( {} );
+like(
+    $form2->field('active')->render,
+    qr/checked="checked"/,
+    'checkbox="checked"'
+);
+$form2->process( item => $author2, params => {} );
+like(
+    $form2->field('active')->render,
+    qr/checked="checked"/,
+    'checkbox="checked"'
+);
+
+
 done_testing;

@@ -17,6 +17,9 @@ __PACKAGE__->add_columns(
   { data_type => "character", default_value => undef, is_nullable => 1, size => 2, },
   "birthdate",
   { data_type => "DATETIME", is_nullable => 0 },
+  "active",
+  { data_type => "BOOLEAN", default_value => 1 },
+
 );
 __PACKAGE__->set_primary_key("author_id");
 #__PACKAGE__->has_many(
