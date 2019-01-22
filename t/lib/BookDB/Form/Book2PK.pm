@@ -20,6 +20,12 @@ Catalyst Form.
 
 has '+item_class'        => ( default => 'Book2PK' );
 
+has_field 'libraryid' => (
+    type        => 'Integer',
+    label       => 'LibraryID',
+    required    => 1,
+    default     => 1,
+);
 has_field 'title' => (
     type             => 'Text',
     required         => 1,

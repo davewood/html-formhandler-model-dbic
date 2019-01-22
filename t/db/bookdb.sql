@@ -290,7 +290,7 @@ CREATE TABLE book2pk (
     PRIMARY KEY (libraryid, id)
 );
 
-CREATE UNIQUE INDEX isbn ON book2pk (libraryid, isbn);
+CREATE UNIQUE INDEX unique_idx_isbn ON book2pk (libraryid, isbn);
 
 INSERT INTO "book2pk" VALUES(1,1, '0-7475-5100-6', 'Harry Potter and the Order of the Phoenix', 'Boomsbury', 766, 2001);
 INSERT INTO "book2pk" VALUES(1,2, '9 788256006199', 'Idioten', 'Interbook', 303, 1901);
@@ -299,6 +299,7 @@ INSERT INTO "book2pk" VALUES(1,4, '782128254', 'The Complete Java 2 Certificatio
 INSERT INTO "book2pk" VALUES(1,5, '123-1234-0-123', 'Winnie The Pooh', 'Houghton Mifflin', 345, 1935);
 INSERT INTO "book2pk" VALUES(1,6, '0-596-10092-2', 'Perl Testing: A Developer''s Notebook', 'O''Reilly', 182, 2005);
 INSERT INTO "book2pk" VALUES(1,7, '0-7475-8134-6', 'Harry Potter and the Last Gasp', 'Boomsbury', 801, 2005);
+INSERT INTO "book2pk" VALUES(2,1, '0-7777-8888', 'Jonny Awesome and the no-one-elses', 'MooTownPublishing', 2, 1972);
 
 
 COMMIT;

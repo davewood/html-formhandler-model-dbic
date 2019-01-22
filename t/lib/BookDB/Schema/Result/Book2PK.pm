@@ -26,6 +26,6 @@ __PACKAGE__->add_columns(
   { data_type => "INTEGER", is_nullable => 0, size => undef },
 );
 __PACKAGE__->set_primary_key("libraryid", "id");
-__PACKAGE__->add_unique_constraint( 'isbn' => ['libraryid', 'isbn'] );
+__PACKAGE__->add_unique_constraint( 'unique_idx_isbn' => ['libraryid', 'isbn'] );
 
 1;
